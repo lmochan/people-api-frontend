@@ -12,7 +12,7 @@ build-job:
 test-job:
   stage: test
   script:
-    - docker run lchanif/people-api-frontend:latest 
+    - docker run -d lchanif/people-api-frontend:latest -name frontend
 
 deploy:
   stage: deploy
