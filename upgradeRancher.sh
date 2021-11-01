@@ -1,3 +1,5 @@
+yum install curl -y
+
 curl -u "$RANCHER_ACCESS_KEY":"$RANCHER_SECRET_KEY" \
 -X POST \
 -H 'Content-Type: application/json' \
