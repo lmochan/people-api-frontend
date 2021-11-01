@@ -1,5 +1,9 @@
-apt-get update
-apt-get install curl
+apk update
+apk upgrade
+apk search curl
+apk -a info curl
+apk -v info curl
+apk add curl
 
 curl -u "$RANCHER_ACCESS_KEY":"$RANCHER_SECRET_KEY" \
 -X POST \
