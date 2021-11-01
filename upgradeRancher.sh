@@ -1,4 +1,5 @@
-apt install curl -y
+apt-get update
+apt-get install curl
 
 curl -u "$RANCHER_ACCESS_KEY":"$RANCHER_SECRET_KEY" \
 -X POST \
