@@ -1,5 +1,5 @@
 # pull official base image
-FROM node:latest as build
+FROM node:stable as build
 
 # set working directory
 WORKDIR /app
