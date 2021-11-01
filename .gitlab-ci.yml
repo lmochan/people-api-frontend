@@ -5,9 +5,9 @@ services:
 build-job:
   stage: build
   script:
-    - docker build -t lchanif/people-api-frontend:latest .
+    - docker build -t lchanif/people-api-frontend .
     - echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USER" --password-stdin
-    - docker push lchanif/cicd-test
+    - docker push lchanif/people-api-frontend
     
 test-job:
   stage: test
