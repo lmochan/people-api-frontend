@@ -1,0 +1,20 @@
+image: docker:latest
+services:
+  - docker:dind
+
+build-job:
+  stage: build
+  script:
+    - docker build -t lchanif/people-api-frontend:latest .
+    - echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USER" --password-stdin
+    - docker push lchanif/cicd-test
+    
+test-job:
+  stage: test
+  script:
+    - docker run lchanif/people-api-frontend:latest 
+
+deploy:
+  stage: deploy
+  script:
+  - sh upgradeRancher.sh
