@@ -57,7 +57,7 @@ curl -u "$RANCHER_ACCESS_KEY":"$RANCHER_SECRET_KEY" \
          "healthRetries":null,
          "healthTimeout":null,
          "hostname":null,
-         "imageUuid":"docker:lchanif/people-frontend:latest",
+         "imageUuid":"docker:lchanif/people-api-frontend:latest",
          "instanceTriggeredStop":"stop",
          "ioMaximumBandwidth":null,
          "ioMaximumIOps":null,
