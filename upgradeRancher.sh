@@ -1,5 +1,8 @@
 apk update
 apk upgrade
+
+update-ca-certificates
+
 apk search curl
 apk -a info curl
 apk -v info curl
