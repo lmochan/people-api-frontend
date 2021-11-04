@@ -3,7 +3,7 @@ apk upgrade
 apk search curl
 apk -a info curl
 apk -v info curl
-apk add curl
+apk --no-cache add curl
 curl --version
 
 curl -u "$RANCHER_ACCESS_KEY":"$RANCHER_SECRET_KEY" \
