@@ -25,7 +25,7 @@ printf "\nca_directory=/etc/ssl/certs" | tee -a /etc/wgetrc
 
 echo 'run wget request'
 echo '---------------------------------'
-wget --no-check-certificate --u "$RANCHER_AUTH" --post-data '{
+wget --no-check-certificate --user "$RANCHER_AUTH" --post-data '{
 
 
       {
