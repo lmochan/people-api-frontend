@@ -1,7 +1,16 @@
+echo 'updating apk + certs'
+echo '---------------------------------'
 apk update
 apk upgrade
+apk add ca-certificates
+update-ca-certificates
+echo 'install wget'
+echo '---------------------------------'
 apk add wget
+printf "\nca_directory=/etc/ssl/certs" | sudo tee -a /etc/wgetrc
 #update-ca-certificates
+
+
 
 #apk search curl
 #apk -a info curl
@@ -14,6 +23,8 @@ apk add wget
 #-H 'Content-Type: application/json' \
 #-d 
 
+echo 'run wget request'
+echo '---------------------------------'
 wget --post-data '{
 
 
