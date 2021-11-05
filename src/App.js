@@ -13,7 +13,7 @@ function App() {
       <Nav loggedIn = {loggedIn}/>
       <Router>
           
-          <Route path = '/directory'><Directory /></Route>
+          <Route path = '/'><Directory /></Route>
 
           {
             (loggedIn !== true) ? <div>
