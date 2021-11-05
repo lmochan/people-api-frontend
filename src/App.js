@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Nav loggedIn = {loggedIn}/>
       <Router>
-          <Redirect from = "/" to = '/directory' />
+          
           <Route path = '/directory'><Directory /></Route>
 
           {
