@@ -1,6 +1,6 @@
 apk update
 apk upgrade
-apk install wget
+apk add wget
 #update-ca-certificates
 
 #apk search curl
