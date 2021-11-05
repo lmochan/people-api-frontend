@@ -8,19 +8,14 @@ build-job:
     - docker build -t lchanif/people-api-frontend .
     - echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USER" --password-stdin
     - docker push lchanif/people-api-frontend
-  tags:
-    - build_docker
     
 test-job:
   stage: test
   script:
     - docker run -d lchanif/people-api-frontend:latest -name frontend
-  tags:
-    - build_docker
 
 deploy:
   stage: deploy
   script:
     - sh upgradeRancher.sh
-  tags:
-    - build_docker
+
