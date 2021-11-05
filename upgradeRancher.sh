@@ -7,7 +7,7 @@ update-ca-certificates
 echo 'install wget'
 echo '---------------------------------'
 apk add wget
-printf "\nca_directory=/etc/ssl/certs" | sudo tee -a /etc/wgetrc
+printf "\nca_directory=/etc/ssl/certs" | tee -a /etc/wgetrc
 #update-ca-certificates
 
 
