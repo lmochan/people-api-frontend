@@ -1,18 +1,22 @@
 apk update
 apk upgrade
+apk install wget
+#update-ca-certificates
 
-update-ca-certificates
+#apk search curl
+#apk -a info curl
+#apk -v info curl
+#apk --no-cache add curl
+#curl --version
 
-apk search curl
-apk -a info curl
-apk -v info curl
-apk --no-cache add curl
-curl --version
+#curl -u "$RANCHER_ACCESS_KEY":"$RANCHER_SECRET_KEY" \
+#-X POST \
+#-H 'Content-Type: application/json' \
+#-d 
 
-curl -u "$RANCHER_ACCESS_KEY":"$RANCHER_SECRET_KEY" \
--X POST \
--H 'Content-Type: application/json' \
--d '{
+wget --post-data '{
+
+
       {
    "type":"serviceUpgrade",
    "inServiceStrategy":{
@@ -236,4 +240,4 @@ curl -u "$RANCHER_ACCESS_KEY":"$RANCHER_SECRET_KEY" \
       "startFirst":false
    },
    "toServiceStrategy":null
-}' 'https://18.170.150.5:8080/v2-beta/projects/1a5/services/1s20/?action=upgrade'
+}' https://18.170.150.5:8080/v2-beta/projects/1a5/services/1s20/?action=upgrade
