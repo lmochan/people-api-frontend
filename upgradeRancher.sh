@@ -25,7 +25,7 @@ printf "\nca_directory=/etc/ssl/certs" | tee -a /etc/wgetrc
 
 echo 'run wget request'
 echo '---------------------------------'
-wget --post-data '{
+wget --no-check-certificate --post-data '{
 
 
       {
